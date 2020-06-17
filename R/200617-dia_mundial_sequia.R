@@ -61,9 +61,29 @@ tab <- base %>%
                        .wt = pond) %>%
   filter(!is.na(pregunta_cat))
 
+# Vector con orden geográfico de regiones
+orden_regiones <- c(
+  'XV De Arica y Par.',
+  'I De Tarapacá',
+  'II De Antofagasta',
+  'III De Atacama',
+  'IV De Coquimbo',
+  'V De Valparaíso',
+  'RM Metropolitana',
+  'VI De Ohiggins',
+  'VII Del Maule',
+  'XVI Del Ñuble',
+  'VIII Del Biobío',
+  'IX De La Araucanía',
+  'XIV De Los Ríos',
+  'X De Los Lagos',
+  'XI De Aysén',
+  'XII De Magallanes')
+
 # Pivotear base
 tab_pivot <- tab %>%
-  pivot_wider(id_cols = c(segmento_cat:pregunta_lab), names_from = pregunta_cat, values_from = prop)
+  pivot_wider(id_cols = c(segmento_cat:pregunta_lab), names_from = pregunta_cat, values_from = prop) %>% 
+  mutate(segmento_cat = fct_relevel(segmento_cat, orden_regiones))
 
 # Gráfico -------------------------------------------------------
 
@@ -74,7 +94,7 @@ gg_sequia <-   ggplot(data = tab_pivot) +
   scale_x_continuous('', limits = c(0,1), labels = function(x) scales::percent(x, accuracy = 1)) +
   scale_y_discrete(labels = wrap_format(30)) +
   scale_shape_manual(values=c(19,20)) +
-  scale_colour_manual(values=c("darkgreen", "grey20")) +
+  scale_colour_manual(values=c("#2ca92c", "grey20")) +
   theme_minimal() +
   facet_grid(rows = 'segmento_cat',
              switch =  'both') +
@@ -85,8 +105,10 @@ gg_sequia <-   ggplot(data = tab_pivot) +
         strip.text.y.left = element_text(angle = 0)) +
   labs(title = "Día mundial contra la desertificación y la sequía ",
        subtitle = "¿Cómo evalúa usted el estado de los ríos y lagos en su región?",
-       caption = "Datos ponderados. n = 7.601. Se omite la categoría “Ns-Nr”. \nEncuesta Nacional de Medio Ambiente 2018",
+       caption = "n = 7.601.Datos ponderados. Se omite la categoría “Ns-Nr”. \nEncuesta Nacional de Medio Ambiente 2018",
        y ='')
+
+gg_sequia
 
 ggsave('outputs/200617_dia_mundial_sequia.png',
        width = 5,

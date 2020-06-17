@@ -105,7 +105,7 @@ gg_sequia <-   ggplot(data = tab_pivot) +
         strip.text.y.left = element_text(angle = 0)) +
   labs(title = "Día mundial contra la desertificación y la sequía ",
        subtitle = "¿Cómo evalúa usted el estado de los ríos y lagos en su región?",
-       caption = "n = 7.601.Datos ponderados. Se omite la categoría “Ns-Nr”. \nEncuesta Nacional de Medio Ambiente 2018",
+       caption = "n = 7.601. Datos ponderados. Se omite la categoría “Ns-Nr”. \nEncuesta Nacional de Medio Ambiente 2018",
        y ='')
 
 gg_sequia

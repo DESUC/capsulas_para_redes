@@ -35,14 +35,13 @@ ggplot(gg, aes(x=pregunta_lab, y=prop)) +
   scale_fill_manual(values = c("darkblue","red3")) +
   scale_color_manual(values = c("darkblue","red3")) +
   ylim(0, 100) +
-  theme(axis.text.x = element_text(angle=50),
-        axis.title.x = element_blank(),
+  theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
         legend.position = "none",
         panel.background = element_rect(fill = "white"),
-        panel.grid.major.x = element_blank(),
-        panel.grid.major.y = element_line(color = "grey")) +
-  scale_x_discrete(labels = function(x) str_wrap(x, width = 7)) + 
+        panel.grid.major.x = element_line(color = "grey"),
+        panel.grid.major.y = element_blank()) +
+  coord_flip() + 
   labs(title = "% Bastante + mucha confianza en instituciones",
        caption = "Encuesta Nacional de Auditoría a la Democracia 2018, PNUD - DESUC")
 

@@ -15,3 +15,9 @@ Códigos de gráficos y visualizaciones que se suben a las redes sociales de DES
 ![28 junio 2020](outputs/orgullo_gay_casen2017.png)
 
 ![28 junio 2020](outputs/orgullo_gay_injuv2018.png)
+
+## 30 junio 2020: Día del Bombero
+
+- Código disponible [aquí](/R/200630-dia_bombero.R)
+
+![30 junio 2020](outputs/dia_bomberos.png)

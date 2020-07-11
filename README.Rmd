@@ -16,23 +16,23 @@ knitr::opts_chunk$set(
 
 Códigos de gráficos y visualizaciones que se suben a las redes sociales de DESUC.
 
-## 11 juli 2020: World Population Day
+## 11 julio 2020: World Population Day
 
 - Código disponible [aquí](R/200711-dia_poblacion_mundial.R)
 
-  ![30 junio 2020](outputs/200711-dia_poblacion_mundial.png)
+  ![30 julio 2020](outputs/200711-dia_poblacion_mundial.png)
 
 
 ## 30 junio 2020: Día del Bombero
 
-- Código disponible [aquí](/R/200630-dia_bombero.R)
+- Código disponible [aquí](R/200630-dia_bombero.R)
 
   ![30 junio 2020](outputs/dia_bomberos.png)
 
 
 ## 28 junio 2020: Orgullo Gay 
 
-- Código disponible [aquí](/R/200628-dia_orgullo_gay.R)
+- Código disponible [aquí](R/200628-dia_orgullo_gay.R)
 
   ![28 junio 2020](outputs/orgullo_gay_casen2017.png)
 
@@ -41,6 +41,6 @@ Códigos de gráficos y visualizaciones que se suben a las redes sociales de DES
 
 ## 17 junio 2020: Dia Mundial contra la desertificación y la sequía
 
-- Código disponible [aquí](/R/200617-dia_mundial_sequia.R)
+- Código disponible [aquí](R/200617-dia_mundial_sequia.R)
 
   ![17 junio 2020](outputs/200617_dia_mundial_sequia.png)
